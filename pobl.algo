@@ -1,0 +1,23 @@
+ALGORITHM Exercice1
+VAR
+    sentence: STRING;
+    i : INTEGER=0;
+    words_counter: INTEGER=1;
+    voyel_counter : INTEGER=0;
+    caracter_counter : INTEGER=1;
+
+BEGIN
+    Read(sentence);
+    WHILE (sentence[i] <> ".") DO
+        i:= i+1; //ou i++
+        caracter_counter:= caracter_counter+1;
+        IF (sentence[i] = " ") THEN
+            words_counter:= +1
+        END_IF
+        IF (sentence[i] = "o" OR sentence[i] = "i" OR sentence[i] = "y" OR sentence[i] = "e" OR sentence[i] = "a" OR sentence[i] = "u" OR sentence[i] = "O" OR sentence[i] = "I" OR sentence[i] = "Y" OR sentence[i] = "E" OR sentence[i] = "A" OR sentence[i] = "U") THEN
+            voyel_counter:= +1;
+        END_IF
+    END_WHILE
+    WRITE("The lenght of the sentence is :", caracter_counter, "caracters");
+    WRITE("The number of word is :", word_counter, "word");
+    WRITE("The number of voyels is :", voyel_counter, "voyel");
